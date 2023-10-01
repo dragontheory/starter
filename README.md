@@ -22,6 +22,11 @@ https://12daysofweb.dev/2022/cascade-layers/
 > If a state is important enough to indicate visually, it's probably important enough to expose to assistive technologies. Building with accessible semantics from the get-go can give you expressive, meaningful style hooks for free.<br />
 https://benmyers.dev/blog/semantic-selectors/
 
+#### Solutions to Replace the 12-Column Grid
+
+> Examining modern CSS solutions to problems [Stephanie Eckles](https://front-end.social/@5t3ph) has been solving over the last 15+ years as a front-end dev.
+https://moderncss.dev/solutions-to-replace-the-12-column-grid/
+
 #### Using CSS to Enforce Accessibility
 
 > ARIA brings a lot to the table that HTML does not, such as complex widgets and state information that HTML does not have natively.<br />
