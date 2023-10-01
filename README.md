@@ -5,7 +5,7 @@ REFERENCES:
 <ul>
 <li>Micro-frontends and composable frontend architectures
 
-> Similar concept as micro-services, micro-frontends are the result of breaking down or decoupling large user interfaces into smaller, more manageable and independently deployable pieces, with benefits that range from simplified coding and development workflows to future-proofing, and project organization.<br />
+> Similar concept as micro-services, micro-frontends are the result of aplying "separation of concerns" (business logic from GUI logic) principles, breaking down, and or decoupling large user interfaces into smaller, more manageable and independently deployable pieces, with benefits that range from simplified coding and development workflows to future-proofing, and project organization.<br />
 https://microfrontend.dev/
 </li>
   
