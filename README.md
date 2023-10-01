@@ -47,7 +47,7 @@ REFERENCES:
 > HTML’s `<details>` and `<summary>` elements can be used to create native disclosure widgets - an expand/collapse widget where more information or interactive controls related to a topic (identified via the subtree content of the `<summary>`, or text preceding the disclosure widget) can be found.<br />
 [https://www.scottohara.me/blog/2022/09/12/details-summary.html](https://www.scottohara.me/blog/2022/09/12/details-summary.html)
 
-#### W3C Specification 5:3 Categorization of Roles
+#### W3C Accessible Rich Internet Applications (WAI-ARIA) 1.3: Specification 5:3 Categorization of Roles
 
 > To support the current user scenario, this specification categorizes roles that define user interface widgets (sliders, tree controls, etc.) and those that define page structure (sections, navigation, etc.). Note that some assistive technologies provide special modes of interaction for regions marked with role application or document.<br />
 [https://w3c.github.io/aria/#roles_categorization](https://w3c.github.io/aria/#roles_categorization)
