@@ -41,3 +41,8 @@ https://supportscss.dev/
 
 > Spacing units relative to the document, :root, Viewport, Element, Content<br />
 https://dev.to/5t3ph/guide-to-css-units-for-relational-spacing-1mj5
+
+#### The details and summary elements, again
+
+> HTML’s `<details>` and `<summary>` elements can be used to create native disclosure widgets - an expand/collapse widget where more information or interactive controls related to a topic (identified via the subtree content of the `<summary>`, or text preceding the disclosure widget) can be found.<br />
+https://www.scottohara.me/blog/2022/09/12/details-summary.html
