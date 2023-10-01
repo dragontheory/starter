@@ -26,3 +26,8 @@ https://benmyers.dev/blog/semantic-selectors/
 
 > ARIA brings a lot to the table that HTML does not, such as complex widgets and state information that HTML does not have natively.<br />
 https://adrianroselli.com/2021/06/using-css-to-enforce-accessibility.html
+
+#### Feature Detection for Modern CSS
+
+> Live, in-browser detection of modern CSS support for selectors, features, and at-rules. Applies support-based classes, exposes a results object, and allows custom tests.<br />
+https://supportscss.dev/
