@@ -43,3 +43,27 @@ Note:
   to ensure they are clearly in view */
   :focus {scroll-padding-block-end: 8vh;}
 }
+
+
+@layer theme {
+  :root {
+    --primary: hsl(265, 38%, 13%);
+    --secondary: hsl(283, 6%, 45%);
+    --tertiary: hsl(257, 15%, 91%);
+    --light: hsl(270, 100%, 99%);
+    --accent: hsl(278, 100%, 92%);
+    --accent--alt: hsl(279, 100%, 97%);
+    --accent--ui: hsl(284, 55%, 66%);
+  }
+
+  html {
+    color-scheme: light dark;
+    accent-color: var(--accent--ui);
+  }
+
+  /* button.danger {background: maroon;}
+  button.info {background: darkslateblue;}
+  call-to-action {background: mediumvioletred;}
+} */
+
+/* - - - - - - - - - - - */
