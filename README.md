@@ -51,3 +51,13 @@ REFERENCES:
 
 > To support the current user scenario, this specification categorizes roles that define user interface widgets (sliders, tree controls, etc.) and those that define page structure (sections, navigation, etc.). Note that some assistive technologies provide special modes of interaction for regions marked with role application or document.<br />
 [https://w3c.github.io/aria/#roles_categorization](https://w3c.github.io/aria/#roles_categorization)
+
+#### Represent State with HTML Attributes, Not Class Names
+
+> Representing an element’s state using HTML attributes and styling the element using the CSS attribute selector.<br />
+[https://www.aleksandrhovhannisyan.com/blog/represent-state-with-html-attributes-not-class-names/](https://www.aleksandrhovhannisyan.com/blog/represent-state-with-html-attributes-not-class-names/)
+
+#### Navigation: You Are Here
+
+> You-are-here navigation consists of signs that help orient website visitors as they explore the site. Many websites need stronger location indicators.<br />
+[https://www.nngroup.com/articles/navigation-you-are-here/](https://www.nngroup.com/articles/navigation-you-are-here/)
