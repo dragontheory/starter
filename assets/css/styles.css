@@ -3,18 +3,15 @@ Inspired by:
 https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ 
 https://12daysofweb.dev/2022/cascade-layers/
 
-Note: 
-@layer:
-  * do not scope
-  * last one wins (just like normal CSS rules)
-  * decrease specificity/priority (easily overriden by root level/non-@layer rules)
-
+Cascading @layer note: 
+  * Not scoped
+  * Last one wins in order of introduction (just like normal CSS rules)
+  * Decreases specificity/priority (easily overriden by root level (non-@layer) rules)
 
 */
 
-@layer reset, theme, global, typography, layout, components, utilities, states;
-
-/* - - - - - - - - - - - */
+/* @layer cascade order introduction (no required) */
+@layer reset, theme, global, typography, layout, components, utilities, states, feature-detection;
 
 @layer reset {
   *,
@@ -44,6 +41,7 @@ Note:
   :focus {scroll-padding-block-end: 8vh;}
 }
 
+/* - - - - - - - - - - - */
 
 @layer theme {
   :root {
@@ -58,12 +56,92 @@ Note:
 
   html {
     color-scheme: light dark;
-    accent-color: var(--accent--ui);
+    accent-color: var(--accent--alt);
   }
 
   /* button.danger {background: maroon;}
   button.info {background: darkslateblue;}
-  call-to-action {background: mediumvioletred;}
-} */
+  call-to-action {background: mediumvioletred;} */
+}
+ 
+@layer utilities {
+
+  /* Ensure content is not clipped unless it will be accessible to keyboard users, without creating a confusing mess for screen reader users. 
+  https://adrianroselli.com/2021/06/using-css-to-enforce-accessibility.html#Keyboard */
+  [role="region"][aria-labelledby][tabindex] {overflow: auto;}
+  [role="region"][aria-labelledby][tabindex]:focus {outline: .1em solid rgba(0,0,0,.1);}
+
+  /* Only hide content when the programmatic state of the trigger (assuming it is the previous sibling) has been correctly set to convey the content it controls is hidden.
+  https://adrianroselli.com/2021/06/using-css-to-enforce-accessibility.html#Hidden */
+  button[aria-expanded="false"] + * {display: none;}
+  button[aria-expanded] + * { /* Don't need anything here. */ }
+
+  /* Choosing a radio button for “Other” in a set of options shows a text box, provided your HTML structure is simple. An ID selector with a couple pseudo-classes and a general sibling combinator can go a long way. */
+  #p5:not(:checked) ~ div {display: none;}
+
+  /* 
+  https://adrianroselli.com/2020/05/disclosure-widgets.html#Accordion */
+  /* :has() is supported nowhere yet */
+  h2:has(> button[aria-expanded="false"]) + div {display: none;}
+
+
+ /* https://www.scottohara.me/blog/2022/09/12/details-summary.html */
+}
 
 /* - - - - - - - - - - - */
+
+@layer states {
+  :disabled {background: dimgray;}
+}
+
+/* - - - - - - - - - - - */
+
+@layer components {
+
+  @layer summary-details {
+    
+  }
+ 
+  /* Sortable Table Columns: selectors are pretty clear in their reliance on the sort property.
+  https://adrianroselli.com/2021/06/using-css-to-enforce-accessibility.html#Sort */
+ 
+  @layer sorting {
+    [aria-sort="ascending"] > button svg.asc {
+      stroke: var(--col-header-color);
+      fill: var(--col-header-color);
+    }
+   
+    [aria-sort="descending"] > button svg.des {
+      stroke: var(--col-header-color);
+      fill: var(--col-header-color);
+    }
+  }
+
+  /* Lean on native HTML attributes along with ARIA properties, such as when the state of a control is invalid:
+   https://adrianroselli.com/2021/06/using-css-to-enforce-accessibility.html#Error */
+  textarea[aria-invalid="true"],
+  textarea[aria-invalid="spelling"],
+  textarea[aria-invalid="grammar"],
+  input:not([type="checkbox"]):not([type="file"]):not([type="image"]):not([type="radio"]):not([type="range"])[aria-invalid] {
+    background: linear-gradient(135deg, rgba(255,0,0,1) 0, rgba(255,0,0,1) .4em, rgba(255,255,255,1) .4em);
+  }
+
+   /* showing the current page in a set of navigation links
+ https://adrianroselli.com/2021/06/using-css-to-enforce-accessibility.html#Current */
+ a[aria-current="page"] {
+  background-color: #187aba;
+  border-color: #187aba;
+}
+
+ 
+ 
+
+ 
+}
+
+
+/* - - - - - - - - - - - */
+
+@layer feature-detection
+
+
