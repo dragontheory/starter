@@ -1,170 +1,90 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
-  <head>
-    <title>D7460N Starter</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="D7460N" />
-    <meta name="description" content="Modern HTML5/CSS3 micro-frontend starter template" />
-    <meta name="robots" content="index, archive" />
-    <meta name="theme-color" content="#0d101b" />
-    <!-- <meta name="color-scheme" content="dark light" /> -->
-    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
-    <link rel="canonical" href="https://d7460n.github.io/ui/" />
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Micro Frontend HTML/CSS Starter Template</title>
+  <meta name="description" content="Micro Frontend HTML/CSS Starter Template" />
+  <meta property="og:title" content="Micro Frontend HTML/CSS Starter Template" />
+  <meta property="og:url" content="https://www.example.com/page"> <!-- TODO: update og:url -->
+  <meta property="og:description" content="Micro Frontend HTML/CSS Starter Template" />
+  <meta property="og:image" content="/path/to/image"> <!-- TODO: og:image -->
+  <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:cared -->
+  <link rel="canonical" href="https://www.example.com/page"> <!-- TODO: update canonical link -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="assets/css/screen.css" media="screen" />
+  <link rel="stylesheet" href="assets/css/print.css" media="print" />
+</head>
 
-  <body style="opacity: 0.0; transition: opacity 1s ease-in-out;">
-    <app-container>
-      <header>
-        <app-logo>D7460N Template</app-logo>
-        <label for="toggleLayout">
-          <input type="checkbox" id="toggleLayout" checked />
-          <demo-buttons>Layouts</demo-buttons>
-        </label>
-        <!-- <label for="oneMenu">
-          <demo-buttons>Menu</demo-buttons>
-          <menu>
-            <li>Save for later</li>
-            <li>Share this news</li>
-          </menu>
-        </label> -->
-        <label for="toggleTheme">
-          <input type="checkbox" id="toggleTheme" />
-          <demo-buttons>&#9788;</demo-buttons>
-        </label>
-      </header>
-      <nav>
-        <h4>Filters</h4>
-        <panel-list>
-          <label for="radio01">
-            <input type="radio" id="radio01" name="radio" checked />
-            <list-cell>Curated</list-cell>
-          </label>
-          <label for="radio02">
-            <input type="radio" id="radio02" name="radio" />
-            <list-cell>HTML/CSS</list-cell>
-          </label>
-          <label for="radio03">
-            <input type="radio" id="radio03" name="radio" />
-            <list-cell>Web Dev</list-cell>
-          </label>
-          <label for="radio04">
-            <input type="radio" id="radio04" name="radio" />
-            <list-cell>2A</list-cell>
-          </label>
-          <label for="radio05">
-            <input type="radio" id="radio05" name="radio" />
-            <list-cell>JESUS</list-cell>
-          </label>
-          <label for="radio06">
-            <input type="radio" id="radio06" name="radio" />
-            <list-cell>Politics</list-cell>
-          </label>
-        </panel-list>
-      </nav>
-      <main>
-        <!-- <h4>Curated Tweets by DragonTheory : :</h4> -->
-        <panel-tab id="tab01">
-          <p>Twitter : : <a href="https://twitter.com/dragontheory" target="_new">@dragontheory</a></p>
-          <panel-list>
-            <a class="twitter-timeline loading"
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-               data-theme="dark"
-               href="https://twitter.com/dragontheory?ref_src=twsrc%5Etfw"
-               data-aria-polite="polite"></a>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab02">
-          <p>Modern HTML, CSS, web design/development</p>
-          <panel-list>
-            <a class="twitter-timeline loading"
-               data-theme="dark"
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-               href="https://twitter.com/dragontheory/lists/web?ref_src=twsrc%5Etfw"></a>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab03">
-          <p>All things web design/development</p>
-          <panel-list>
-
-          <a class="twitter-timeline loading"
-             data-theme="dark"
-             data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-             href="https://twitter.com/alienlebarge/lists/web-dev?ref_src=twsrc%5Etfw"></a>
-
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab04">
-          <p>All things Second Amendment</p>
-          <panel-list>
-            <a class="twitter-timeline"
-               data-theme="dark"
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter" href="https://twitter.com/dragontheory/lists/1668054846845362180?ref_src=twsrc%5Etfw"></a>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab05">
-          <p>All things JESUS, the Bible, and our origins</p>
-          <panel-list>
-            <a class="twitter-timeline loading"
-               data-theme="dark"
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-
-             href="https://twitter.com/dragontheory/lists/god?ref_src=twsrc%5Etfw"></a>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab06">
-          <p>All things politics</p>
-          <panel-list>
-            <a class="twitter-timeline loading" 
-               data-theme="dark" 
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-               href="https://twitter.com/dragontheory/lists/1443917294070079511?ref_src=twsrc%5Etfw"></a>
-          </panel-list>
-        </panel-tab>
-      </main>
-      <aside>
-        <h4>Sources</h4>
-        <panel-list>
-          <p>Sticky header/scrollable content (no js).</p>
-          <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
-          <p>Adipiscing enim eu turpis egestas pretium aenean. Posuere morbi leo urna molestie at elementum eu facilisis. Aenean et tortor at risus viverra adipiscing at in. Egestas sed tempus urna et pharetra pharetra massa.</p>
-          <p>ASIDE content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
-          <p>Adipiscing enim eu turpis egestas pretium aenean. Posuere morbi leo urna molestie at elementum eu facilisis. Aenean et tortor at risus viverra adipiscing at in. Egestas sed tempus urna et pharetra pharetra massa.</p>
-        </panel-list>
-      </aside>
-      <aside-2>
-        <h4>More Details About This List</h4>
-        <panel-list>
-          <div class="unsupported">
-            <p>Your browser does not support <span-bold>CSS :has() pseudo-class</span-bold>.</p>
-            <p>Coming soon...</p>
-            <p>In the mean-time, switch to a Chromium based browser.</p>
-          </div>
-          <div class="supported">
-            <p>
-              Your browser supports <span-bold>CSS :has() pseudo-class</span-bold>!
-            </p>
-          </div>
-        </panel-list>
-      </aside-2>
-      <footer>
-        <powered-by>FOOTER</powered-by>
-        <app-version>v.0.00001</app-version>
-      </footer>
-    </app-container>
-
-    <script type="text/javascript" charset="utf-8" src="https://platform.twitter.com/widgets.js" async></script>
-    <script type="text/javascript" charset="utf-8" src="assets/js/scripts.js"></script>
-    <script type="text/javascript" charset="utf-8" src="assets/js/app.js"></script>
-    <noscript>
-      <style>
-        body {opacity: 1.0;}
-      </style>
-    </noscript>
-  </body>
+<body>
+  <app-container>
+    <header></header>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>Classes</li>
+        <li>Events</li>
+        <li>Policy</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <h3>Call to action</h3>
+        <section></section>
+        <section></section>
+      </article>
+      <article>
+        <h3>Intro</h3>
+        <section></section>
+        <section></section>
+      </article>
+      <article>
+        <h3>Events</h3>
+        <section></section>
+        <section></section>
+      </article>
+      <article>
+        <h3>Instructors and Staff</h3>
+        <section>
+          <ul>
+            <li>Elizabeth Hawkins</li>
+            <li>Becca Collier</li>
+            <li>Sara Moorman</li>
+            <li></li>
+            <li></li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <h3>Gallery</h3>
+        <section></section>
+      </article>
+      <article>
+        <h3>Contact</h3>
+        <section></section>
+        <section></section>
+      </article>
+    </main>
+    <aside>
+      <h3>Contact</h3>
+      <section></section>
+      <section></section>
+    </aside>
+    <footer>
+      <h3>Contact</h3>
+      <section></section>
+      <section></section>
+    </footer>
+  </app-container>
+  <script src="/assets/js/scripts.js" type="module"></script>
+</body>
 
 </html>
