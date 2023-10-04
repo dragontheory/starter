@@ -207,6 +207,51 @@ footer {
 
 /* - - - - - - - - - - - */
 
-@layer feature-detection
+@layer feature-detection {
+
+/* Nesting:
+https://github.com/w3c/csswg-drafts/issues/8399 */
+@supports (.foo { @media (width >= 500px) { } }) {
+  …
+}
+
+/* https://moderncss.dev/testing-feature-support-for-modern-css/ */
+ @supports (accent-color: red) {
+    /* styles when accent-color is supported */
+  }
+
+  @supports selector(:is(a)) {
+    /* styles when :is() is supported */
+  }
+
+  @supports (leading-trim: both) or (text-box-trim: both) {
+    /* Styles when either property is supported */
+  }
+  
+  @supports (transform: scale(1)) and (scroll-timeline-name: a) {
+    /* Styles when both properties are supported */
+  }
+  
+  @supports not selector(:focus-visible) {
+    /* Styles when :focus-visible is not supported */
+  }
+
+  /* This should fail in Firefox 112 */
+  @supports selector(li:has(+ *)) {
+   /* It may not fail, so the body becomes red */
+   body {
+    background: red;
+  }
+
+  /* This rule does fail to apply */
+  li:has(+ *) {
+    background: green;
+  }
+
+   /* https://www.bram.us/2023/01/04/css-has-feature-detection-with-supportsselector-you-want-has-not-has/
+https://codepen.io/bramus/pen/YzvowwJ */
+
+   
+}
 
 
